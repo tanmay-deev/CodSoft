@@ -1,5 +1,18 @@
 const display = document.getElementById("display");
 
+document.addEventListener("keydown", function(event) {
+    const key = event.key;
+    if (/[0-9.+\-*/]/.test(key)) {
+        appendToDisplay(key);
+    } else if (key === "Enter") {
+        calculate();
+    } else if (key === "Backspace") {
+        display.value = display.value.slice(0, -1);
+    } else if (key === "Escape") {
+        clearDisplay();
+    }
+});
+
 function appendToDisplay(input) {
     display.value += input;
 }
@@ -15,10 +28,10 @@ function calculate() {
     let lastOperator = "+";
 
     for (let i = 0; i <= expression.length; i++) {
-        let char = expression[i] || "="; 
+        let char = expression[i] || "=";
 
         if (!isNaN(char) || char === ".") {
-            currentNumber += char; 
+            currentNumber += char;
         } else {
             if (currentNumber !== "") {
                 let num = parseFloat(currentNumber);
@@ -29,9 +42,10 @@ function calculate() {
 
                 currentNumber = "";
             }
-            lastOperator = char; 
+            lastOperator = char;
         }
     }
 
-    display.value = result; 
+    display.value = result;
 }
+
