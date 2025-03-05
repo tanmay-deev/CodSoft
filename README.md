@@ -37,5 +37,3 @@ During my internship at CodSoft, I undertook several projects that enhanced my s
 ## Conclusion
 
 These projects provided me with practical experience in web development, from designing responsive layouts to implementing interactive features. Through this internship, I gained a deeper understanding of creating functional and visually appealing web applications, enhancing both my technical skills and design sensibilities.
-
-For more information about CodSoft and their internship programs, visit their [official website](https://www.codsoft.in/). 
